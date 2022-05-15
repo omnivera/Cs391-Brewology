@@ -29,7 +29,7 @@ function App() {
           </Nav>
         </Container>
       </Navbar>
-      <div className="Background"><p className="home-text">Some sample text about <br></br> how amazing our coffee is <br></br> goes here</p></div>
+      <div className="Background"><p className="home-text">Some sample text about <br></br> how <b>AMAZING</b> our coffee is <br></br> goes here with some fancy font</p></div>
 
 
 
