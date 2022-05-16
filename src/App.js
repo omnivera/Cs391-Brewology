@@ -15,9 +15,9 @@ function App() {
       <Navbar className="nav-color">
         <Container>
           <img
-            src = {require("./images/coffee-logo.png")}
-            width = "60"
-            height = "60"
+            src={require("./images/coffee-logo.png")}
+            width="60"
+            height="60"
             className="d-inline-block align-top"
             alt="coffee logo"
           />
@@ -29,8 +29,13 @@ function App() {
           </Nav>
         </Container>
       </Navbar>
-      <div className="Background"><p className="home-text">Some sample text about <br></br> how <b>AMAZING</b> our coffee is <br></br> goes here with some fancy font</p></div>
-
+      <div className="Background">
+        <p className="home-text">Some sample text about <br></br> how <b>AMAZING</b> our coffee is <br></br> goes here with some fancy font</p>
+        <Button as={Col} variant='dark'>Buy Now!</Button>
+      </div>
+      <div class="footer">
+        <footer>Footer</footer>
+      </div>
 
 
       {/* <Navbar className="brewnavbar">

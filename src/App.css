@@ -55,6 +55,16 @@
   color: white;
 }
 
+.footer {
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background-color: #631200;
+  color: white;
+  text-align: center;
+}
+
 .navLinks {
   color: white;
   font-size: xx-large;
