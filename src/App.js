@@ -7,6 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Nav } from 'react-bootstrap';
+import { Link, Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -23,18 +24,25 @@ function App() {
           />
           <Navbar.Brand href="#home" style={{ color: '#f0ebe0' }}>Brewology</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home" style={{ color: '#f0ebe0' }}>Home</Nav.Link>
-            <Nav.Link href="#features" style={{ color: '#f0ebe0' }}>Menu</Nav.Link>
+          <Nav.Link  ><Link style={{ color: '#f0ebe0' }} className='links' to="/">Home</Link></Nav.Link> 
+          <Nav.Link  ><Link style={{ color: '#f0ebe0' }} className='links' to="/menu">Menu</Link></Nav.Link> 
+            
+
             <Nav.Link href="#pricing" style={{ color: '#f0ebe0' }}>Checkout</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
-      <div className="Background">
-        <p className="home-text">Some sample text about <br></br> how <b>AMAZING</b> our coffee is <br></br> goes here with some fancy font</p>
-        <Button as={Col} variant='dark'>Buy Now!</Button>
-      </div>
-      <div class="footer">
-        <footer>Footer</footer>
+      <Outlet />
+    
+      <div className="footer">
+        <footer>
+          
+
+          <div>  © Copyright Brewology. All rights reserved</div>
+          <div >Designed By Mert Dallar, Esrah Zahid, Hitman</div>
+      
+        
+          </footer>
       </div>
 
 

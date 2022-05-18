@@ -13,6 +13,8 @@
   }
 }
 
+
+
 .App-header {
   background-color: white;
   min-height: 100vh;
@@ -22,6 +24,25 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+/* Navbar ----------------------------------------
+*/
+
+.brand{
+
+margin-left: 5vw;
+
+}
+
+.navitems{
+
+  margin-right: 3vw;
+  margin-left: 4vw;
+}
+
+.links{
+  text-decoration: none;
 }
 
 .App-link {
@@ -41,8 +62,8 @@
 
 .Background {
   background-image: url(./images/coffee-bg.jpg);
-  width: 100vw;
-  height: 100vh; 
+
+  height: 90vh; 
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: relative;
@@ -58,9 +79,10 @@
 .footer {
   left: 0;
   bottom: 0;
-  height: 100px;
-  width: 100%;
+  height: 60px;
+
   background-color: #631200;
+  align-items: center;
   color: white;
   text-align: center;
 }
@@ -83,4 +105,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  background-color: #21242b;
+} 
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
 }
