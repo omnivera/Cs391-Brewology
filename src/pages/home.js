@@ -17,7 +17,7 @@ function App() {
 
       <div className="Background">
         <p className="home-text">Some sample text about <br></br> how <b>AMAZING</b> our coffee is <br></br> goes here with some fancy font</p>
-        <Button as={Col} variant='dark'>Buy Now!</Button>
+        <Button className='home-button' as={Col} variant='dark'>Buy Now!</Button>
       </div>
   
 

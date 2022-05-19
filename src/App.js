@@ -35,13 +35,13 @@ function App() {
       <Outlet />
     
       <div className="footer">
-        <footer>
+        <footer >
           
-
+<div className='innerfooter'>
           <div>  © Copyright Brewology. All rights reserved</div>
           <div >Designed By Mert Dallar, Esrah Zahid, Hitman</div>
       
-        
+          </div>
           </footer>
       </div>
 
