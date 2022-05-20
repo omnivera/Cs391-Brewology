@@ -14,7 +14,7 @@ import React, { Component } from 'react';
 
 
 
-const api = axios.create({ baseURL: `http://localhost:3001/products` });
+const api = axios.create({ baseURL: `http://localhost:3000/coffe` });
 class Menu extends Component {
   constructor(props) {
     super(props);

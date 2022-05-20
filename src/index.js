@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Menu from "./pages/menu";
 import Home from "./pages/home";
+import Addproduct from "./pages/addproduct";
 import {
   BrowserRouter,
   Routes,
@@ -20,6 +21,7 @@ root.render(
   <Route path="/" element={<App />}>
   <Route path="/" element={<Home />} />
     <Route path="menu" element={<Menu />} />
+    <Route path="addproduct" element={<Addproduct />} />
   
    
     <Route path="*" element={

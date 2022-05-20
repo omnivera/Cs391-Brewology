@@ -28,9 +28,11 @@ const Tablecoffe = (props) => {
      {list.map((item) => {
                             return (
                                 <tr key={item.id}>
-                                    <td>{item.name}</td>
-                                    <td>{item.price}</td>
-                                    <td>{item.description}</td>
+                                    <td>{item.id}</td>
+                                    <td>{item.productname}</td>
+                                    <td>{item.small}</td>
+                                    <td>{item.medium}</td>
+                                    <td>{item.large}</td>
                                     <td><button onClick={() => {onDelete(item.id);}}>
                                         <i>Delete</i>
                                     </button></td>                              

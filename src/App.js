@@ -26,9 +26,10 @@ function App() {
           <Nav className="me-auto">
           <Nav.Link  ><Link style={{ color: '#f0ebe0' }} className='links' to="/">Home</Link></Nav.Link> 
           <Nav.Link  ><Link style={{ color: '#f0ebe0' }} className='links' to="/menu">Menu</Link></Nav.Link> 
+          <Nav.Link  ><Link style={{ color: '#f0ebe0' }} className='links' to="/addproduct">Add Product</Link></Nav.Link> 
             
 
-            <Nav.Link href="#pricing" style={{ color: '#f0ebe0' }}>Checkout</Nav.Link>
+           
           </Nav>
         </Container>
       </Navbar>
