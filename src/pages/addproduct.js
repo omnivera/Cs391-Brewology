@@ -1,50 +1,93 @@
-import React from 'react';
 
-export default class ProductForm extends React.Component {
+import '../App.css';
+import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Table from 'react-bootstrap/Table';
+//import CoffeeForm from '../components/coffeeform';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import axios from 'axios';
+import React, { Component } from 'react';
+
+
+
+
+const api = axios.create({ baseURL: `http://localhost:3000/coffe` });
+class Menu extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            formOpen: false,
-            name: '',
-            price: '',
-            description: ''
-        };
+            id: '',
+            quantity: '',
+            productname: '',
+            small: '',
+            medium: '',
+            large: '',
+
+        }
+        this.handleChange = this.handleChange.bind(this);
         this.handleAdd = this.handleAdd.bind(this);
     }
-    handleAdd() {
-        const { name, price, description } = this.state;
-        const newProduct = { name, price, description }
-        this.props.onAdd(newProduct);
-        this.setState({
-            formOpen: false,
-            name: '',
-            price: '',
-            description: ''
-        });
-
-
+    getProducts = () => {
+        api.get('/').then(res => {
+            const list = res.data;
+            this.setState({ products: list, message: "" });
+        })
     }
+    componentDidMount() {
+        this.getProducts();
+    }
+
+    handleChange(event) { this.setState({ [event.target.name]: event.target.value }); }
+
+    handleAdd(product) {
+        const obj = {id:0, quantity: this.state.quantity, productname: this.state.productname, small: '$19.99', medium: '$29.99', large: '$39.99' }
+        api.post('/', obj)
+            .then(res => {
+                let { coffe } = this.state;
+                coffe.push(res.data);
+                this.setState({ coffe });
+            })
+    }
+
+
 
     render() {
+        return (
 
-        const button = <button onClick={() => { this.setState({ formOpen: !this.state.formOpen }) }}>
-        <i>Add</i>
-    </button>;
-        const form = (
-            <div>
-                <table>
-                    <tr><td><label>Name</label></td>
-                        <td><input type="text" value={this.state.name} onChange={e => this.setState({ name: e.target.value })} /></td>
-                    </tr>
-                    <tr><td><label>Price</label></td>
-                        <td><input type="number" value={this.state.price} onChange={e => this.setState({ price: e.target.value })} /></td></tr>
-                    <tr><td><label>Description</label></td>
-                        <td><textarea width="100" height="300" value={this.state.description} onChange={e => this.setState({ description: e.target.value })} /></td></tr>
-                    <tr><td colSpan="2"><button onClick={this.handleAdd}>Add</button></td></tr>
-                </table>
+            <div className='add-coffee-form'>
 
+                <p>Add more coffee to your cart here:</p>
+
+                <form>
+                    <label>
+                        Coffee Name:
+                        <br></br>
+                        {/* <input type="text" name="productname" onChange={this.handleChange} /> */}
+                        <select name="productname" className="add-form-format" onChange={this.handleChange}>
+                            <option value="Null">Select Coffee</option>
+                            <option value="Americano">Americano</option>
+                            <option value="Cappuccino">Cappuccino</option>
+                            <option value="Cappuccino">Espresso</option>
+                            <option value="Irish coffee">Irish coffee</option>
+                            <option value="Arabica">Arabica</option>
+                            <option value="Cold Brew">Cold Brew</option>
+                            <option value="Macchiato">Macchiato</option>
+                        </select>
+                    </label>
+                    <br></br>
+                    <label>
+                        Quantity:
+                        <br></br>
+                        <input type="text" className="add-form-format" name="quantity" onChange={this.handleChange} />
+                    </label>
+                    <br></br>
+                    <Button type="submit" onClick={this.handleAdd}>Add</Button>
+                </form>
             </div>
         );
-        return this.state.formOpen ? form : button;
     }
 }
+
+export default Menu;

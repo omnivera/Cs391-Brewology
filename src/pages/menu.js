@@ -61,12 +61,12 @@ class Menu extends Component {
     return (
 
       <div className='tablecont'>
-   
-   <Fulltable 
+
+        <Fulltable
           list={this.state.products}
           onDelete={this.handleDelete}>
         </Fulltable>
-</div>
+      </div>
 
       // <div style={{ padding: "1rem 0" }}>
       //   <h2>{this.state.message}</h2>

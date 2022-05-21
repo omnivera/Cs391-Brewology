@@ -1,12 +1,7 @@
 
 import '../App.css';
 import Button from 'react-bootstrap/Button';
-
 import Table from 'react-bootstrap/Table';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 const Tablecoffe = (props) => {
     const {list, onDelete} =props;
     return <div>
@@ -16,8 +11,9 @@ const Tablecoffe = (props) => {
    <Table  bordered hover variant="light">
      <thead>
        <tr>
-         <th>#</th>
-         <th>Product Name</th>
+         <th>Id</th>
+         <th>Quantity</th>
+         <th>Coffee Name</th>
          <th>Small</th>
          <th>Medium</th>
          <th>Large</th>
@@ -29,13 +25,14 @@ const Tablecoffe = (props) => {
                             return (
                                 <tr key={item.id}>
                                     <td>{item.id}</td>
+                                    <td>{item.quantity}</td>
                                     <td>{item.productname}</td>
                                     <td>{item.small}</td>
                                     <td>{item.medium}</td>
                                     <td>{item.large}</td>
-                                    <td><button onClick={() => {onDelete(item.id);}}>
-                                        <i>Delete</i>
-                                    </button></td>                              
+                                    <td><Button className='del-btn' variant='outline-danger' onClick={() => {onDelete(item.id) ;}}>
+                                        <i class="fa fa-trash"></i>
+                                    </Button></td>                              
                                     </tr>
                             );
                         })}
