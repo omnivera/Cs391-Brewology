@@ -83,7 +83,25 @@ class Menu extends Component {
                         <input type="text" className="add-form-format" name="quantity" onChange={this.handleChange} />
                     </label>
                     <br></br>
-                    <Button type="submit" onClick={this.handleAdd}>Add</Button>
+                    <label>
+                        Small price:
+                        <br></br>
+                        <input type="text" className="add-form-format" name="quantity" onChange={this.handleChange} />
+                    </label>
+                    <br></br>
+                    <label>
+                        Medium price:
+                        <br></br>
+                        <input type="text" className="add-form-format" name="quantity" onChange={this.handleChange} />
+                    </label>
+                    <br></br>
+                    <label>
+                        Large price:
+                        <br></br>
+                        <input type="text" className="add-form-format" name="quantity" onChange={this.handleChange} />
+                    </label>
+                    <br></br>
+                    <Button type="submit" onClick={this.handleAdd}>Add Coffee to Menu!</Button>
                 </form>
             </div>
         );

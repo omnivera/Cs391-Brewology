@@ -47,6 +47,22 @@
       "small": "$19.99",
       "medium": "$29.99",
       "large": "$39.99"
+    },
+    {
+      "id": 6,
+      "quantity": "1",
+      "productname": "Americano",
+      "small": "$19.99",
+      "medium": "$29.99",
+      "large": "$39.99"
+    },
+    {
+      "id": 6,
+      "quantity": "1",
+      "productname": "Hitman Coffee",
+      "small": "$19.99",
+      "medium": "$29.99",
+      "large": "$39.99"
     }
   ]
 }
