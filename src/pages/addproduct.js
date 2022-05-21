@@ -28,6 +28,8 @@ class Menu extends Component {
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleAdd = this.handleAdd.bind(this);
+        this.openCForm = this.openCForm.bind(this);
+        this.openDForm = this.openDForm.bind(this);
     }
     getProducts = () => {
         api.get('/').then(res => {
@@ -42,7 +44,7 @@ class Menu extends Component {
     handleChange(event) { this.setState({ [event.target.name]: event.target.value }); }
 
     handleAdd(product) {
-        const obj = {id:0, quantity: this.state.quantity, productname: this.state.productname, small: '$19.99', medium: '$29.99', large: '$39.99' }
+        const obj = { id: 0, quantity: this.state.quantity, productname: this.state.productname, small: "$" + this.state.small, medium: "$" + this.state.medium, large: "$" + this.state.large }
         api.post('/', obj)
             .then(res => {
                 let { coffe } = this.state;
@@ -50,59 +52,77 @@ class Menu extends Component {
                 this.setState({ coffe });
             })
     }
+    openCForm() {
+        document.getElementById("add-coffee-form").style.display = "block";
+        document.getElementById("add-dessert-form").style.display = "none";
+    }
 
+    openDForm() {
+        document.getElementById("add-dessert-form").style.display = "block";
+        document.getElementById("add-coffee-form").style.display = "none";
+    }
 
 
     render() {
         return (
+            <div>
+                <Button type="button" class="btn cancel" onClick={this.openCForm} >Add coffee</Button> <Button type="button" class="btn cancel" onClick={this.openDForm}>Add Tea</Button>
+                <div className='add-coffee-form' id='add-coffee-form'>
 
-            <div className='add-coffee-form'>
-
-                <p>Add more coffee to your cart here:</p>
-
-                <form>
-                    <label>
-                        Coffee Name:
+                    <p>Add more coffee to your menu here:</p>
+                    <form>
+                        <label>
+                            Coffee Name:
+                            <br></br>
+                            {/* <input type="text" name="productname" onChange={this.handleChange} /> */}
+                            <select name="productname" className="add-form-format" onChange={this.handleChange}>
+                                <option value="Null">Select Coffee</option>
+                                <option value="Americano">Americano</option>
+                                <option value="Cappuccino">Cappuccino</option>
+                                <option value="Cappuccino">Espresso</option>
+                                <option value="Irish coffee">Irish coffee</option>
+                                <option value="Arabica">Arabica</option>
+                                <option value="Cold Brew">Cold Brew</option>
+                                <option value="Macchiato">Macchiato</option>
+                            </select>
+                        </label>
                         <br></br>
-                        {/* <input type="text" name="productname" onChange={this.handleChange} /> */}
-                        <select name="productname" className="add-form-format" onChange={this.handleChange}>
-                            <option value="Null">Select Coffee</option>
-                            <option value="Americano">Americano</option>
-                            <option value="Cappuccino">Cappuccino</option>
-                            <option value="Cappuccino">Espresso</option>
-                            <option value="Irish coffee">Irish coffee</option>
-                            <option value="Arabica">Arabica</option>
-                            <option value="Cold Brew">Cold Brew</option>
-                            <option value="Macchiato">Macchiato</option>
-                        </select>
-                    </label>
-                    <br></br>
-                    <label>
-                        Quantity:
+                        <label>
+                            Quantity:
+                            <br></br>
+                            <input type="text" className="add-form-format" name="quantity" onChange={this.handleChange} />
+                        </label>
                         <br></br>
-                        <input type="text" className="add-form-format" name="quantity" onChange={this.handleChange} />
-                    </label>
-                    <br></br>
-                    <label>
-                        Small price:
+                        <label>
+                            Small price:
+                            <br></br>
+                            <input type="text" className="add-form-format" name="small" onChange={this.handleChange} />
+                        </label>
                         <br></br>
-                        <input type="text" className="add-form-format" name="quantity" onChange={this.handleChange} />
-                    </label>
-                    <br></br>
-                    <label>
-                        Medium price:
+                        <label>
+                            Medium price:
+                            <br></br>
+                            <input type="text" className="add-form-format" name="medium" onChange={this.handleChange} />
+                        </label>
                         <br></br>
-                        <input type="text" className="add-form-format" name="quantity" onChange={this.handleChange} />
-                    </label>
-                    <br></br>
-                    <label>
-                        Large price:
+                        <label>
+                            Large price:
+                            <br></br>
+                            <input type="text" className="add-form-format" name="large" onChange={this.handleChange} />
+                        </label>
                         <br></br>
-                        <input type="text" className="add-form-format" name="quantity" onChange={this.handleChange} />
-                    </label>
-                    <br></br>
-                    <Button type="submit" onClick={this.handleAdd}>Add Coffee to Menu!</Button>
-                </form>
+                        <Button type="submit" className="btn btn-outline-dark" onClick={this.handleAdd}>Add Coffee to Menu!</Button>
+                    </form>
+                </div>
+                <div className='add-dessert-form' id='add-dessert-form'>
+                    <p>Add more coffee to your cart here:</p>
+                    <form>
+                        <label>
+                            Tea Name:
+                            <br></br>
+                        </label>
+                    </form>
+                </div>
             </div>
         );
     }

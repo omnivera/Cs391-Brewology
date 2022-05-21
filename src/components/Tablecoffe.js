@@ -12,7 +12,7 @@ const Tablecoffe = (props) => {
      <thead>
        <tr>
          <th>Id</th>
-         <th>Quantity</th>
+         <th>Type</th>
          <th>Coffee Name</th>
          <th>Small</th>
          <th>Medium</th>

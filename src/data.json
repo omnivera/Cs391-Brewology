@@ -1,68 +1,28 @@
 {
   "coffe": [
     {
-      "id": 1,
-      "quantity": "1",
-      "productname": "Irish coffee",
-      "small": "$19.99",
-      "medium": "$29.99",
-      "large": "$39.99"
-    },
-    {
       "id": 2,
-      "quantity": "3",
-      "productname": "Cold Brew",
-      "small": "$19.99",
-      "medium": "$29.99",
-      "large": "$39.99"
+      "quantity": "Coffee",
+      "productname": "Cappuccino",
+      "small": "$10",
+      "medium": "$30",
+      "large": "$50"
     },
     {
       "id": 3,
-      "quantity": "1",
-      "productname": "Macchiato",
-      "small": "$19.99",
-      "medium": "$29.99",
-      "large": "$39.99"
-    },
+      "quantity": "Coffee",
+      "productname": "Cold Brew",
+      "small": "$6",
+      "medium": "$12",
+      "large": "$20"
+    }, 
     {
       "id": 4,
-      "quantity": "7",
-      "productname": "Arabica",
-      "small": "$19.99",
-      "medium": "$29.99",
-      "large": "$39.99"
-    },
-    {
-      "id": 4,
-      "quantity": "7",
-      "productname": "Its6amWhatIsSleep?",
-      "small": "$19.99",
-      "medium": "$29.99",
-      "large": "$39.99"
-    },
-    {
-      "id": 5,
-      "quantity": "9",
-      "productname": "Arabica",
-      "small": "$19.99",
-      "medium": "$29.99",
-      "large": "$39.99"
-    },
-    {
-      "id": 6,
-      "quantity": "1",
-      "productname": "Americano",
-      "small": "$19.99",
-      "medium": "$29.99",
-      "large": "$39.99"
-    },
-    {
-      "id": 6,
-      "quantity": "1",
-      "productname": "Hitman Coffee",
-      "small": "$19.99",
-      "medium": "$29.99",
-      "large": "$39.99"
+      "quantity": "Tea",
+      "productname": "Green Tea",
+      "small": "$7",
+      "medium": "$14",
+      "large": "$22"
     }
   ]
 }
