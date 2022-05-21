@@ -24,26 +24,26 @@ function App() {
           />
           <Navbar.Brand href="#home" style={{ color: '#f0ebe0' }}>Brewology</Navbar.Brand>
           <Nav className="me-auto">
-          <Nav.Link  ><Link style={{ color: '#f0ebe0' }} className='links' to="/">Home</Link></Nav.Link> 
-          <Nav.Link  ><Link style={{ color: '#f0ebe0' }} className='links' to="/menu">Menu</Link></Nav.Link> 
-          <Nav.Link  ><Link style={{ color: '#f0ebe0' }} className='links' to="/addproduct">Add Product</Link></Nav.Link> 
-            
+            <Nav.Link  ><Link style={{ color: '#f0ebe0' }} className='links' to="/">Home</Link></Nav.Link>
+            <Nav.Link  ><Link style={{ color: '#f0ebe0' }} className='links' to="/menu">Menu</Link></Nav.Link>
+            <Nav.Link  ><Link style={{ color: '#f0ebe0' }} className='links' to="/addproduct">Add Product</Link></Nav.Link>
 
-           
+
+
           </Nav>
         </Container>
       </Navbar>
       <Outlet />
-    
+
       <div className="footer">
         <footer >
-          
-<div className='innerfooter'>
-          <div>  © Copyright Brewology. All rights reserved</div>
-          <div >Designed By Mert Dallar, Esrah Zahid, Hitman</div>
-      
+
+          <div className='innerfooter'>
+            <div>  © Copyright Brewology. All rights reserved</div>
+            <div >Designed By Mert Dallar, Esrah Zahid, Hitman</div>
+
           </div>
-          </footer>
+        </footer>
       </div>
 
 
