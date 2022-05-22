@@ -14,10 +14,10 @@ function App() {
     <div className="App">
 
 
-
       <div className="Background">
-        <p className="home-text">Some sample text about <br></br> how <b>AMAZING</b> our coffee is <br></br> goes here with some fancy font</p>
-        <Button className='home-button' as={Col} variant='dark'>Buy Now!</Button>
+        <p className="home-text">Create the best menu for your <br></br>coffee shop with our quick and easy <br></br> to use menu maker!</p>
+        <Link to="/addproduct" ><Button className='home-button' as={Col} variant='dark' >Create Menu Now!</Button></Link>
+        
       </div>
   
 

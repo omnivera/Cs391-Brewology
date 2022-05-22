@@ -8,7 +8,7 @@ const Tablecoffe = (props) => {
 
 <div className='tablecont'>
    
-   <Table  bordered hover variant="light">
+   <Table bordered hover variant="light" ClassName="menu-table" style={{ color: '#631200' }}>
      <thead>
        <tr>
          <th>Id</th>
@@ -25,7 +25,7 @@ const Tablecoffe = (props) => {
                             return (
                                 <tr key={item.id}>
                                     <td>{item.id}</td>
-                                    <td>{item.quantity}</td>
+                                    <td>{item.type}</td>
                                     <td>{item.productname}</td>
                                     <td>{item.small}</td>
                                     <td>{item.medium}</td>

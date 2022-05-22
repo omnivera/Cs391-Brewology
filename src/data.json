@@ -2,7 +2,7 @@
   "coffe": [
     {
       "id": 2,
-      "quantity": "Coffee",
+      "type": "Coffee",
       "productname": "Cappuccino",
       "small": "$10",
       "medium": "$30",
@@ -10,19 +10,35 @@
     },
     {
       "id": 3,
-      "quantity": "Coffee",
+      "type": "Coffee",
       "productname": "Cold Brew",
       "small": "$6",
       "medium": "$12",
       "large": "$20"
-    }, 
+    },
     {
       "id": 4,
-      "quantity": "Tea",
+      "type": "Tea",
       "productname": "Green Tea",
       "small": "$7",
       "medium": "$14",
       "large": "$22"
+    },
+    {
+      "id": 5,
+      "type": "alcohol",
+      "productname": "Arabica",
+      "small": "$10",
+      "medium": "$30",
+      "large": "$50"
+    },
+    {
+      "id": 6,
+      "type": "tea",
+      "productname": "Macchiato",
+      "small": "$10",
+      "medium": "$30",
+      "large": "$50"
     }
   ]
 }

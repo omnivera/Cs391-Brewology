@@ -19,7 +19,7 @@ class Menu extends Component {
         super(props);
         this.state = {
             id: '',
-            quantity: '',
+            type: '',
             productname: '',
             small: '',
             medium: '',
@@ -44,7 +44,7 @@ class Menu extends Component {
     handleChange(event) { this.setState({ [event.target.name]: event.target.value }); }
 
     handleAdd(product) {
-        const obj = { id: 0, quantity: this.state.quantity, productname: this.state.productname, small: "$" + this.state.small, medium: "$" + this.state.medium, large: "$" + this.state.large }
+        const obj = { id: 0, type: this.state.type, productname: this.state.productname, small: "$" + this.state.small, medium: "$" + this.state.medium, large: "$" + this.state.large }
         api.post('/', obj)
             .then(res => {
                 let { coffe } = this.state;
@@ -66,7 +66,7 @@ class Menu extends Component {
     render() {
         return (
             <div>
-                <Button type="button" class="btn cancel" onClick={this.openCForm} >Add coffee</Button> <Button type="button" class="btn cancel" onClick={this.openDForm}>Add Tea</Button>
+                <Button id ="add-product-btn" type="button" variant='dark' onClick={this.openCForm} >Add coffee</Button> <Button type="button" id ="add-product-btn" variant='dark' onClick={this.openDForm}>Add Tea</Button>
                 <div className='add-coffee-form' id='add-coffee-form'>
 
                     <p>Add more coffee to your menu here:</p>
@@ -88,9 +88,9 @@ class Menu extends Component {
                         </label>
                         <br></br>
                         <label>
-                            Quantity:
+                            Type:
                             <br></br>
-                            <input type="text" className="add-form-format" name="quantity" onChange={this.handleChange} />
+                            <input type="text" className="add-form-format" name="type" onChange={this.handleChange} />
                         </label>
                         <br></br>
                         <label>
@@ -115,7 +115,7 @@ class Menu extends Component {
                     </form>
                 </div>
                 <div className='add-dessert-form' id='add-dessert-form'>
-                    <p>Add more coffee to your cart here:</p>
+                    <p>Add more tea to your cart here:</p>
                     <form>
                         <label>
                             Tea Name:
