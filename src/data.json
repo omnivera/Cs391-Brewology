@@ -39,6 +39,14 @@
       "small": "$10",
       "medium": "$30",
       "large": "$50"
+    },
+    {
+      "id": 7,
+      "type": "alcohol",
+      "productname": "Cold Brew",
+      "small": "$10",
+      "medium": "$30",
+      "large": "$50"
     }
   ]
 }
