@@ -85,6 +85,7 @@ margin-left: 5vw;
   font-size: 50px;
   padding-top: 20vh;
   color: beige;
+  text-shadow: #631200 5px 8px 9px;
 }
 
 
@@ -145,8 +146,15 @@ padding: 1vh;
 .tablecont{
   margin-left: 5vw;
   margin-right: 5vw;
-  margin-top: 5vh;
+  padding: 5vh;
+}
 
+.menu-bg{
+  background-image: url(./images/flower-vector.jpg);
+  height: 90vh; 
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 
@@ -168,6 +176,22 @@ padding: 1vh;
 #add-dessert-form{
   display: none;
   padding-top: 50px
+}
+
+#tea-img{
+  float: right;
+  padding-right: 40vh;
+  text-align: top;
+  display: flex;
+  margin: auto;
+}
+
+#coffee-img{
+  padding-left: 50vh;
+  float: left;
+  text-align: top;
+  display: flex;
+  margin: auto;
 }
 
 #add-product-btn{

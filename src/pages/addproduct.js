@@ -55,18 +55,38 @@ class Menu extends Component {
     openCForm() {
         document.getElementById("add-coffee-form").style.display = "block";
         document.getElementById("add-dessert-form").style.display = "none";
+        document.getElementById("tea-img").style.display = "none";
+        document.getElementById("coffee-img").style.display = "block";
+
     }
 
     openDForm() {
         document.getElementById("add-dessert-form").style.display = "block";
         document.getElementById("add-coffee-form").style.display = "none";
+        document.getElementById("coffee-img").style.display = "none";
+        document.getElementById("tea-img").style.display = "block";
     }
 
 
     render() {
         return (
             <div>
-                <Button id ="add-product-btn" type="button" variant='dark' onClick={this.openCForm} >Add coffee</Button> <Button type="button" id ="add-product-btn" variant='dark' onClick={this.openDForm}>Add Tea</Button>
+                <Button id="add-product-btn" type="button" variant='dark' onClick={this.openCForm} >Add coffee</Button> <Button type="button" id="add-product-btn" variant='dark' onClick={this.openDForm}>Add Tea</Button>
+                <br></br>
+                <img
+                    src={require("../images/coffee-names.jpg")}
+                    height="500"
+                    width="auto"
+                    id="coffee-img"
+                    alt="coffee logo"
+                />
+                <img
+                    src={require("../images/tea-names.jpg")}
+                    height="500"
+                    width="auto"
+                    id="tea-img"
+                    alt="coffee logo"
+                />
                 <div className='add-coffee-form' id='add-coffee-form'>
 
                     <p>Add more coffee to your menu here:</p>

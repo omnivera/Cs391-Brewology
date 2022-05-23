@@ -47,6 +47,14 @@
       "small": "$10",
       "medium": "$30",
       "large": "$50"
+    },
+    {
+      "id": 8,
+      "type": "coffee",
+      "productname": "Americano",
+      "small": "$10",
+      "medium": "$20",
+      "large": "$30"
     }
   ]
 }

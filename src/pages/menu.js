@@ -59,15 +59,15 @@ class Menu extends Component {
 
   render() {
     return (
+      <div className='menu-bg'>
+        <div className='tablecont'>
 
-      <div className='tablecont'>
-
-        <Fulltable
-          list={this.state.products}
-          onDelete={this.handleDelete}>
-        </Fulltable>
+          <Fulltable
+            list={this.state.products}
+            onDelete={this.handleDelete}>
+          </Fulltable>
+        </div>
       </div>
-
       // <div style={{ padding: "1rem 0" }}>
       //   <h2>{this.state.message}</h2>
       //   <FilteringTable title="* * * Today's Deals * * *"
