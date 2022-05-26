@@ -24,9 +24,9 @@ function App() {
           />
           <Navbar.Brand href="#home" style={{ color: '#f0ebe0' }}>Brewology</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link  ><Link style={{ color: '#f0ebe0' }} className='links' to="/">Home</Link></Nav.Link>
-            <Nav.Link  ><Link style={{ color: '#f0ebe0' }} className='links' to="/menu">Menu</Link></Nav.Link>
-            <Nav.Link  ><Link style={{ color: '#f0ebe0' }} className='links' to="/addproduct">Add Product</Link></Nav.Link>
+            <Link style={{ color: '#f0ebe0' }} className='links' to="/">Home</Link>
+            <Link style={{ color: '#f0ebe0' }} className='links' to="/menu">Menu</Link>
+            <Link style={{ color: '#f0ebe0' }} className='links' to="/addproduct">Add Product</Link>
 
 
 

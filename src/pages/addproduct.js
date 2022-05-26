@@ -54,6 +54,8 @@ class Menu extends Component {
                 this.setState({ coffe });
             })
     }
+
+    
     openCForm() {
         document.getElementById("add-coffee-form").style.display = "block";
         document.getElementById("coffe-img").style.display = "none";
@@ -105,7 +107,7 @@ class Menu extends Component {
                                             <label>
                                                 Type:
                                                 <br></br>
-                                                <input type="text" className="add-form-format" disabled name="type" defaultValue="Coffee"  onChange={this.handleChange} />
+                                                <input type="text" className="add-form-format" name="type" defaultValue="Coffee" onChange={this.handleChange} />
                                             </label>
                                             <br></br>
                                             <label>
@@ -173,7 +175,7 @@ class Menu extends Component {
                                             <label>
                                                 Type:
                                                 <br></br>
-                                                <input type="text" className="add-form-format" disabled name="type" value={'Tea'} onChange={this.handleChange} />
+                                                <input type="text" className="add-form-format" disabled name="type" defaultValue={'Tea'} onChange={this.handleChange} />
                                             </label>
                                             <br></br>
                                             <label>
@@ -198,24 +200,10 @@ class Menu extends Component {
                                         </form>
                                     </div>
                                 </div>
-
-
                             </div>
-
-
-
                         </div>
-
-
-
-
                     </div>
                 </div>
-
-
-
-
-
             </div>
         );
     }
