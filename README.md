@@ -19,15 +19,15 @@ Coffee shop owner:
 - in the **Menu** page, the user is welcomed with a very intuitive and simple to use interface; he has the option of adding 2 different products( coffee or tea) by clicking their specific buttons
 
 ### Individual contributions
-######Mert Dallar
+###### Mert Dallar
 - 
 
 ------------
-######Esrah Zahid
+###### Esrah Zahid
 - 
 
 ------------
-######Alexandru Marian Vulc
+###### Alexandru Marian Vulc
 - worked on the design of the product
 - created the add tea part in the **addproduct** page
 - worked on the **home** page look and feel
@@ -36,7 +36,7 @@ Coffee shop owner:
 
 ------------
 
-###How to run
+### How to run
 - first clone the repository
 - open a GitBash terminal and run the following command to start the server
 `$ json-server --watch src/data.json`
