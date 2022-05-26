@@ -39,38 +39,6 @@
       "small": "$10",
       "medium": "$30",
       "large": "$50"
-    },
-    {
-      "id": 7,
-      "type": "alcohol",
-      "productname": "Cold Brew",
-      "small": "$10",
-      "medium": "$30",
-      "large": "$50"
-    },
-    {
-      "id": 8,
-      "type": "coffee",
-      "productname": "Americano",
-      "small": "$10",
-      "medium": "$20",
-      "large": "$30"
-    },
-    {
-      "id": 9,
-      "type": "coffee",
-      "productname": "Cappuccino",
-      "small": "$10",
-      "medium": "$12",
-      "large": "$30"
-    },
-    {
-      "id": 10,
-      "type": "vodka",
-      "productname": "Irish coffee",
-      "small": "$6",
-      "medium": "$30",
-      "large": "$50"
     }
   ]
 }
