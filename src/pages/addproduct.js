@@ -105,7 +105,7 @@ class Menu extends Component {
                                                     <option selected disabled value="Null">Select Coffee</option>
                                                     <option value="Americano">Americano</option>
                                                     <option value="Cappuccino">Cappuccino</option>
-                                                    <option value="Cappuccino">Espresso</option>
+                                                    <option value="Espresso">Espresso</option>
                                                     <option value="Irish coffee">Irish coffee</option>
                                                     <option value="Arabica">Arabica</option>
                                                     <option value="Cold Brew">Cold Brew</option>
@@ -116,7 +116,7 @@ class Menu extends Component {
                                             <label>
                                                 Type:
                                                 <br></br>
-                                                <input type="text" className="add-form-format" disabled name="type" value="Coffee" onChange={this.handleChange} />
+                                                <input type="text" className="add-form-format" disabled name="type" defaultValue="Coffee" onChange={this.handleChange} />
                                             </label>
                                             <br></br>
                                             <label>
@@ -184,7 +184,7 @@ class Menu extends Component {
                                             <label>
                                                 Type:
                                                 <br></br>
-                                                <input type="text" className="add-form-format" disabled name="type" value='Tea' onChange={this.handleChange} />
+                                                <input type="text" className="add-form-format" disabled name="type" defaultValue='Tea' onChange={this.handleChange} />
                                             </label>
                                             <br></br>
                                             <label>

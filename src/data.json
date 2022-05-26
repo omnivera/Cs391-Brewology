@@ -1,60 +1,60 @@
 {
   "coffe": [
     {
+      "id": 1,
+      "type": "Coffee",
+      "productname": "Americano",
+      "small": "$10",
+      "medium": "$15",
+      "large": "$20"
+    },
+    {
       "id": 2,
       "type": "Coffee",
-      "productname": "Cappuccino",
-      "small": "$10",
-      "medium": "$30",
-      "large": "$50"
+      "productname": "Espresso",
+      "small": "$8",
+      "medium": "$16",
+      "large": "$24"
     },
     {
       "id": 3,
       "type": "Coffee",
-      "productname": "Cold Brew",
-      "small": "$6",
+      "productname": "Cappuccino",
+      "small": "$5",
       "medium": "$12",
-      "large": "$20"
+      "large": "$17"
     },
     {
       "id": 4,
       "type": "Tea",
-      "productname": "Green Tea",
-      "small": "$7",
-      "medium": "$14",
-      "large": "$22"
+      "productname": "Herbal Tea",
+      "small": "$3",
+      "medium": "$9",
+      "large": "$11"
     },
     {
       "id": 5,
-      "type": "alcohol",
-      "productname": "Arabica",
-      "small": "$10",
-      "medium": "$30",
-      "large": "$50"
+      "type": "Tea",
+      "productname": "Pu-erh",
+      "small": "$6",
+      "medium": "$8",
+      "large": "$13"
     },
     {
       "id": 6,
-      "type": "tea",
-      "productname": "Macchiato",
+      "type": "Tea",
+      "productname": "Oolong Tea",
       "small": "$10",
-      "medium": "$30",
-      "large": "$50"
+      "medium": "$20",
+      "large": "$35"
     },
     {
       "id": 7,
-      "type": "Coffee",
-      "productname": "Cappuccino",
-      "small": "$3",
-      "medium": "$12",
-      "large": "$20"
-    },
-    {
-      "id": 8,
       "type": "Tea",
-      "productname": "Yerba Mate and Guayusa",
-      "small": "$6",
-      "medium": "$12",
-      "large": "$20"
+      "productname": "Black Tea",
+      "small": "$4",
+      "medium": "$7",
+      "large": "$10"
     }
   ]
 }
