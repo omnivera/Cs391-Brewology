@@ -8,7 +8,7 @@
 
 
 ### Project Description
-Brewology is a website developed for the needs of small businesses such as coffee shops or tea houses. It provides an user friendly interface to elegant beautiful menus.
+Brewology is a website developed for the needs of small businesses such as coffee shops or tea houses. It provides an user friendly interface to build elegant menus.
 
 ### Usage scenarios
 Coffee shop owner: 
