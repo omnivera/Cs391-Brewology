@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Brewology
+##### An easy to use and visually appealing menu maker web application developed using ReactJS
+*Team members: Mert Dallar, Esrah Zahid, Alexandru Marian Vulc*
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Screenshot 2022-05-26 234649](https://user-images.githubusercontent.com/81852894/170581198-45cdb3be-25db-40e7-ba9c-faaea908f78b.jpg)
+![image](https://user-images.githubusercontent.com/81852894/170581278-6c740f38-bf83-4057-8859-0c4982c872d0.png)
+![image](https://user-images.githubusercontent.com/81852894/170581343-716454d9-d0d1-4e38-99f6-62d938019d93.png)
 
-## Available Scripts
 
-In the project directory, you can run:
+### Project Description
+Brewology is a website developed for the needs of small businesses such as coffee shops or tea houses. It provides an user friendly interface to elegant beautiful menus.
 
-### `npm start`
+### Usage scenarios
+Coffee shop owner: 
+- the user is presented with the home page
+- when **Create Menu Now!** button is pressed on the **homepage**, the user is sent to the **AddProduct** page where he can start building his menu
+- easy to navigate through the pages using the navbar : **Home**, **Menu** and **AddProduct**
+- in the **Menu** page, there is a table displaying all the contents of the designed menu; the user has the option of deleting an item by clicking the button on the right side of the table
+- in the **Menu** page, the user is welcomed with a very intuitive and simple to use interface; he has the option of adding 2 different products( coffee or tea) by clicking their specific buttons
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Individual contributions
+######Mert Dallar
+- 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+------------
+######Esrah Zahid
+- 
 
-### `npm test`
+------------
+######Alexandru Marian Vulc
+- worked on the design of the product
+- created the add tea part in the **addproduct** page
+- worked on the **home** page look and feel
+- did updates on the **menu** page
+- debugged the code with my team mates
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+------------
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+###How to run
+- first clone the repository
+- open a GitBash terminal and run the following command to start the server
+`$ json-server --watch src/data.json`
+- open a separate terminal and run the following command to start the web application
+`$ npm start`
+- if you get a npm error, use the following command
+`$ npm install`
