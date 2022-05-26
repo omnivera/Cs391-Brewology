@@ -28,7 +28,8 @@ class Menu extends Component {
 
         }
         this.handleChange = this.handleChange.bind(this);
-        this.handleAdd = this.handleAdd.bind(this);
+        this.handleCAdd = this.handleCAdd.bind(this);
+        this.handleTAdd = this.handleTAdd.bind(this);
         this.openCForm = this.openCForm.bind(this);
         this.openDForm = this.openDForm.bind(this);
     }
@@ -44,9 +45,8 @@ class Menu extends Component {
 
     handleChange(event) { this.setState({ [event.target.name]: event.target.value }); }
 
-    handleAdd(product) {
-        console.log(this.state.type)
-        const obj = { id: 0, type: this.state.type, productname: this.state.productname, small: "$" + this.state.small, medium: "$" + this.state.medium, large: "$" + this.state.large }
+    handleCAdd(product) {
+        const obj = { id: 0, type: "Coffee", productname: this.state.productname, small: "$" + this.state.small, medium: "$" + this.state.medium, large: "$" + this.state.large }
         api.post('/', obj)
             .then(res => {
                 let { coffe } = this.state;
@@ -55,6 +55,15 @@ class Menu extends Component {
             })
     }
 
+    handleTAdd(product) {
+        const obj = { id: 0, type: "Tea", productname: this.state.productname, small: "$" + this.state.small, medium: "$" + this.state.medium, large: "$" + this.state.large }
+        api.post('/', obj)
+            .then(res => {
+                let { coffe } = this.state;
+                coffe.push(res.data);
+                this.setState({ coffe });
+            })
+    }
     
     openCForm() {
         document.getElementById("add-coffee-form").style.display = "block";
@@ -87,7 +96,7 @@ class Menu extends Component {
                                     <div className='add-coffee-form' id='add-coffee-form'>
 
                                         <p>Add more coffee to your menu here:</p>
-                                        <form onSubmit={this.handleAdd}>
+                                        <form onSubmit={this.handleCAdd}>
                                             <label>
                                                 Coffee Name:
                                                 <br></br>
@@ -107,7 +116,7 @@ class Menu extends Component {
                                             <label>
                                                 Type:
                                                 <br></br>
-                                                <input type="text" className="add-form-format" name="type" defaultValue="Coffee" onChange={this.handleChange} />
+                                                <input type="text" className="add-form-format" disabled name="type" value="Coffee" onChange={this.handleChange} />
                                             </label>
                                             <br></br>
                                             <label>
@@ -155,7 +164,7 @@ class Menu extends Component {
 
                                     <div className='add-tea-form' id='add-tea-form'>
                                         <p>Add more tea to your cart here:</p>
-                                        <form onSubmit={this.handleAdd}>
+                                        <form onSubmit={this.handleTAdd}>
                                             <label>
                                                 Tea Name:
                                                 <br></br>
@@ -175,7 +184,7 @@ class Menu extends Component {
                                             <label>
                                                 Type:
                                                 <br></br>
-                                                <input type="text" className="add-form-format" disabled name="type" defaultValue={'Tea'} onChange={this.handleChange} />
+                                                <input type="text" className="add-form-format" disabled name="type" value='Tea' onChange={this.handleChange} />
                                             </label>
                                             <br></br>
                                             <label>
