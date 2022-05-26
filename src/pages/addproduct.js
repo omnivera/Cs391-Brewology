@@ -54,14 +54,14 @@ class Menu extends Component {
     }
     openCForm() {
         document.getElementById("add-coffee-form").style.display = "block";
-        document.getElementById("add-dessert-form").style.display = "none";
+        document.getElementById("add-tea-form").style.display = "none";
         document.getElementById("tea-img").style.display = "none";
         document.getElementById("coffee-img").style.display = "block";
 
     }
 
     openDForm() {
-        document.getElementById("add-dessert-form").style.display = "block";
+        document.getElementById("add-tea-form").style.display = "block";
         document.getElementById("add-coffee-form").style.display = "none";
         document.getElementById("coffee-img").style.display = "none";
         document.getElementById("tea-img").style.display = "block";
@@ -134,13 +134,50 @@ class Menu extends Component {
                         <Button type="submit" className="btn btn-outline-dark" onClick={this.handleAdd}>Add Coffee to Menu!</Button>
                     </form>
                 </div>
-                <div className='add-dessert-form' id='add-dessert-form'>
+                <div className='add-tea-form' id='add-tea-form'>
                     <p>Add more tea to your cart here:</p>
                     <form>
                         <label>
                             Tea Name:
                             <br></br>
+                            {/* <input type="text" name="productname" onChange={this.handleChange} /> */}
+                            <select name="productname" className="add-form-format" onChange={this.handleChange}>
+                                <option value="Null">Select Tea</option>
+                                <option value="Black Tea">Black Tea</option>
+                                <option value="Green Tea">Green Tea</option>
+                                <option value="Oolong Tea">Oolong Tea</option>
+                                <option value="Pu-erh">Pu-erh</option>
+                                <option value="Yellow Tea">Yellow Tea</option>
+                                <option value="Herbal Tea">Herbal Tea</option>
+                                <option value="Yerba Mate and Guayusa">Yerba Mate and Guayusa</option>
+                            </select>
                         </label>
+                        <br></br>
+                        <label>
+                            Type:
+                            <br></br>
+                            <input type="text" className="add-form-format" name="type" onChange={this.handleChange} />
+                        </label>
+                        <br></br>
+                        <label>
+                            Small price:
+                            <br></br>
+                            <input type="text" className="add-form-format" name="small" onChange={this.handleChange} />
+                        </label>
+                        <br></br>
+                        <label>
+                            Medium price:
+                            <br></br>
+                            <input type="text" className="add-form-format" name="medium" onChange={this.handleChange} />
+                        </label>
+                        <br></br>
+                        <label>
+                            Large price:
+                            <br></br>
+                            <input type="text" className="add-form-format" name="large" onChange={this.handleChange} />
+                        </label>
+                        <br></br>
+                        <Button type="submit" className="btn btn-outline-dark" onClick={this.handleAdd}>Add Tea to Menu!</Button>
                     </form>
                 </div>
             </div>
