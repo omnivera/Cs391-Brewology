@@ -45,6 +45,7 @@ class Menu extends Component {
     handleChange(event) { this.setState({ [event.target.name]: event.target.value }); }
 
     handleAdd(product) {
+        console.log(this.state.type)
         const obj = { id: 0, type: this.state.type, productname: this.state.productname, small: "$" + this.state.small, medium: "$" + this.state.medium, large: "$" + this.state.large }
         api.post('/', obj)
             .then(res => {
@@ -55,16 +56,13 @@ class Menu extends Component {
     }
     openCForm() {
         document.getElementById("add-coffee-form").style.display = "block";
-
         document.getElementById("coffe-img").style.display = "none";
-
     }
 
     openDForm() {
         document.getElementById("add-tea-form").style.display = "block";
         document.getElementById("tea-img").style.display = "none";
     }
-
 
     render() {
         return (
@@ -107,7 +105,7 @@ class Menu extends Component {
                                             <label>
                                                 Type:
                                                 <br></br>
-                                                <input type="text" className="add-form-format" disabled name="type" value={'Coffee'} onChange={this.handleChange} />
+                                                <input type="text" className="add-form-format" disabled name="type" defaultValue="Coffee"  onChange={this.handleChange} />
                                             </label>
                                             <br></br>
                                             <label>
@@ -196,7 +194,7 @@ class Menu extends Component {
                                                 <input type="number" required min={7} max={45} className="add-form-format" name="large" onChange={this.handleChange} />
                                             </label>
                                             <br></br>
-                                            <Button type="submit" className="btn btn-outline-dark" onClick={this.handleAdd}>Add Tea to Menu!</Button>
+                                            <Button type="submit" className="btn btn-outline-dark">Add Tea to Menu!</Button>
                                         </form>
                                     </div>
                                 </div>

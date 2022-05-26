@@ -8,7 +8,7 @@ const Tablecoffe = (props) => {
 
 <div className='tablecont'>
    
-   <Table bordered hover variant="light" ClassName="menu-table" style={{ color: '#631200' }}>
+   <Table bordered hover variant="light" className="menu-table" style={{ color: '#631200' }}>
      <thead>
        <tr>
          <th>Id</th>
@@ -31,7 +31,7 @@ const Tablecoffe = (props) => {
                                     <td>{item.medium}</td>
                                     <td>{item.large}</td>
                                     <td><Button className='del-btn' variant='outline-danger' onClick={() => {onDelete(item.id) ;}}>
-                                        <i class="fa fa-trash"></i>
+                                        <i className="fa fa-trash"></i>
                                     </Button></td>                              
                                     </tr>
                             );

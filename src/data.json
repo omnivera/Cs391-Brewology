@@ -43,18 +43,34 @@
     {
       "id": 7,
       "type": "",
-      "productname": "",
-      "small": "$1",
-      "medium": "$",
-      "large": "$"
+      "productname": "Arabica",
+      "small": "$6",
+      "medium": "$12",
+      "large": "$20"
     },
     {
       "id": 8,
       "type": "",
-      "productname": "",
-      "small": "$1",
-      "medium": "$",
-      "large": "$"
+      "productname": "Cappuccino",
+      "small": "$3",
+      "medium": "$12",
+      "large": "$20"
+    },
+    {
+      "id": 9,
+      "type": "",
+      "productname": "Yellow Tea",
+      "small": "$6",
+      "medium": "$12",
+      "large": "$30"
+    },
+    {
+      "id": 10,
+      "type": "",
+      "productname": "Macchiato",
+      "small": "$6",
+      "medium": "$12",
+      "large": "$30"
     }
   ]
 }
