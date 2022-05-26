@@ -55,142 +55,166 @@ class Menu extends Component {
     }
     openCForm() {
         document.getElementById("add-coffee-form").style.display = "block";
-        document.getElementById("add-tea-form").style.display = "none";
-        document.getElementById("tea-img").style.display = "none";
-        document.getElementById("coffee-img").style.display = "block";
+
+        document.getElementById("coffe-img").style.display = "none";
 
     }
 
     openDForm() {
         document.getElementById("add-tea-form").style.display = "block";
-        document.getElementById("add-coffee-form").style.display = "none";
-        document.getElementById("coffee-img").style.display = "none";
-        document.getElementById("tea-img").style.display = "block";
+        document.getElementById("tea-img").style.display = "none";
     }
 
 
     render() {
         return (
             <div>
-                <Container>
-                    <Row>
-                        <Col md={6}><Button id="add-product-btn" type="button" variant='dark' onClick={this.openCForm} >Add coffee</Button>
-                            <Row>
-                            <img
-                                src={require("../images/coffee-names.jpg")}
-                                height="500"
-                                width="auto"
-                                id="coffee-img"
-                                alt="coffee logo"
-                            />
-                            <img
-                                src={require("../images/tea-names.jpg")}
-                                height="500"
-                                width="auto"
-                                id="tea-img"
-                                alt="coffee logo"
-                            />
-                            <div className='add-coffee-form' id='add-coffee-form'>
+                <div className="card" >
 
-                                <p>Add more coffee to your menu here:</p>
-                                <form>
-                                    <label>
-                                        Coffee Name:
-                                        <br></br>
-                                        {/* <input type="text" name="productname" onChange={this.handleChange} /> */}
-                                        <select name="productname" className="add-form-format" onChange={this.handleChange}>
-                                            <option value="Null">Select Coffee</option>
-                                            <option value="Americano">Americano</option>
-                                            <option value="Cappuccino">Cappuccino</option>
-                                            <option value="Cappuccino">Espresso</option>
-                                            <option value="Irish coffee">Irish coffee</option>
-                                            <option value="Arabica">Arabica</option>
-                                            <option value="Cold Brew">Cold Brew</option>
-                                            <option value="Macchiato">Macchiato</option>
-                                        </select>
-                                    </label>
-                                    <br></br>
-                                    <label>
-                                        Type:
-                                        <br></br>
-                                        <input type="text" className="add-form-format" name="type" onChange={this.handleChange} />
-                                    </label>
-                                    <br></br>
-                                    <label>
-                                        Small price:
-                                        <br></br>
-                                        <input type="text" className="add-form-format" name="small" onChange={this.handleChange} />
-                                    </label>
-                                    <br></br>
-                                    <label>
-                                        Medium price:
-                                        <br></br>
-                                        <input type="text" className="add-form-format" name="medium" onChange={this.handleChange} />
-                                    </label>
-                                    <br></br>
-                                    <label>
-                                        Large price:
-                                        <br></br>
-                                        <input type="text" className="add-form-format" name="large" onChange={this.handleChange} />
-                                    </label>
-                                    <br></br>
-                                    <Button type="submit" className="btn btn-outline-dark" onClick={this.handleAdd}>Add Coffee to Menu!</Button>
-                                </form>
+                    <div className="card-body">
+                        <h3 className="card-title">Choose Drink Type</h3>
+
+                        <div className='row justify-content-center'>
+                            <div className='col-md-6 col-sm-4 col-lg-4'>
+
+                                <Button id="add-product-btn" type="button" variant='dark' onClick={this.openCForm} >Add coffee</Button>
+
+                                <div className='row justify-content-center'>
+                                    <img
+                                        src={require("../images/coffee-names.jpg")}
+                                        id="coffe-img"
+                                    />
+                                    <div className='add-coffee-form' id='add-coffee-form'>
+
+                                        <p>Add more coffee to your menu here:</p>
+                                        <form onSubmit={this.handleAdd}>
+                                            <label>
+                                                Coffee Name:
+                                                <br></br>
+                                                {/* <input type="text" name="productname" onChange={this.handleChange} /> */}
+                                                <select required name="productname" className="add-form-format" onChange={this.handleChange}>
+                                                    <option selected disabled value="Null">Select Coffee</option>
+                                                    <option value="Americano">Americano</option>
+                                                    <option value="Cappuccino">Cappuccino</option>
+                                                    <option value="Cappuccino">Espresso</option>
+                                                    <option value="Irish coffee">Irish coffee</option>
+                                                    <option value="Arabica">Arabica</option>
+                                                    <option value="Cold Brew">Cold Brew</option>
+                                                    <option value="Macchiato">Macchiato</option>
+                                                </select>
+                                            </label>
+                                            <br></br>
+                                            <label>
+                                                Type:
+                                                <br></br>
+                                                <input type="text" className="add-form-format" disabled name="type" value={'Coffee'} onChange={this.handleChange} />
+                                            </label>
+                                            <br></br>
+                                            <label>
+                                                Small price:
+                                                <br></br>
+                                                <input type="number" required min={2} max={10} className="add-form-format" name="small" onChange={this.handleChange} />
+                                            </label>
+                                            <br></br>
+                                            <label>
+                                                Medium price:
+                                                <br></br>
+                                                <input type="number" required min={4} max={20} className="add-form-format" name="medium" onChange={this.handleChange} />
+                                            </label>
+                                            <br></br>
+                                            <label>
+                                                Large price:
+                                                <br></br>
+                                                <input type="number" required min={7} max={45} className="add-form-format" name="large" onChange={this.handleChange} />
+                                            </label>
+                                            <br></br>
+                                            <Button type="submit" className="btn btn-outline-dark">Add Coffee to Menu!</Button>
+                                        </form>
+                                    </div>
+
+                                </div>
+
+
+
+
                             </div>
-                        </Row>
-                        </Col>
-                        <Col md={6}><Button type="button" id="add-product-btn" variant='dark' onClick={this.openDForm}>Add Tea</Button>
-                        <Row>
-                            <div className='add-tea-form' id='add-tea-form'>
-                                <p>Add more tea to your cart here:</p>
-                                <form>
-                                    <label>
-                                        Tea Name:
-                                        <br></br>
-                                        {/* <input type="text" name="productname" onChange={this.handleChange} /> */}
-                                        <select name="productname" className="add-form-format" onChange={this.handleChange}>
-                                            <option value="Null">Select Tea</option>
-                                            <option value="Black Tea">Black Tea</option>
-                                            <option value="Green Tea">Green Tea</option>
-                                            <option value="Oolong Tea">Oolong Tea</option>
-                                            <option value="Pu-erh">Pu-erh</option>
-                                            <option value="Yellow Tea">Yellow Tea</option>
-                                            <option value="Herbal Tea">Herbal Tea</option>
-                                            <option value="Yerba Mate and Guayusa">Yerba Mate and Guayusa</option>
-                                        </select>
-                                    </label>
-                                    <br></br>
-                                    <label>
-                                        Type:
-                                        <br></br>
-                                        <input type="text" className="add-form-format" name="type" onChange={this.handleChange} />
-                                    </label>
-                                    <br></br>
-                                    <label>
-                                        Small price:
-                                        <br></br>
-                                        <input type="text" className="add-form-format" name="small" onChange={this.handleChange} />
-                                    </label>
-                                    <br></br>
-                                    <label>
-                                        Medium price:
-                                        <br></br>
-                                        <input type="text" className="add-form-format" name="medium" onChange={this.handleChange} />
-                                    </label>
-                                    <br></br>
-                                    <label>
-                                        Large price:
-                                        <br></br>
-                                        <input type="text" className="add-form-format" name="large" onChange={this.handleChange} />
-                                    </label>
-                                    <br></br>
-                                    <Button type="submit" className="btn btn-outline-dark" onClick={this.handleAdd}>Add Tea to Menu!</Button>
-                                </form>
+
+                            <div className='col-md-6 col-sm-4 col-lg-4'>
+
+                                <Button type="button" id="add-product-btn" variant='dark' onClick={this.openDForm}>Add Tea</Button>
+
+                                <div className='row justify-content-center'>
+
+
+
+                                    <img
+                                        src={require("../images/tea-names.jpg")}
+                                        id="tea-img"
+                                    />
+
+
+                                    <div className='add-tea-form' id='add-tea-form'>
+                                        <p>Add more tea to your cart here:</p>
+                                        <form onSubmit={this.handleAdd}>
+                                            <label>
+                                                Tea Name:
+                                                <br></br>
+                                                {/* <input type="text" name="productname" onChange={this.handleChange} /> */}
+                                                <select required name="productname" className="add-form-format" onChange={this.handleChange}>
+                                                    <option selected disabled value="Null">Select Tea</option>
+                                                    <option value="Black Tea">Black Tea</option>
+                                                    <option value="Green Tea">Green Tea</option>
+                                                    <option value="Oolong Tea">Oolong Tea</option>
+                                                    <option value="Pu-erh">Pu-erh</option>
+                                                    <option value="Yellow Tea">Yellow Tea</option>
+                                                    <option value="Herbal Tea">Herbal Tea</option>
+                                                    <option value="Yerba Mate and Guayusa">Yerba Mate and Guayusa</option>
+                                                </select>
+                                            </label>
+                                            <br></br>
+                                            <label>
+                                                Type:
+                                                <br></br>
+                                                <input type="text" className="add-form-format" disabled name="type" value={'Tea'} onChange={this.handleChange} />
+                                            </label>
+                                            <br></br>
+                                            <label>
+                                                Small price:
+                                                <br></br>
+                                                <input type="number" required min={2} max={10} className="add-form-format" name="small" onChange={this.handleChange} />
+                                            </label>
+                                            <br></br>
+                                            <label>
+                                                Medium price:
+                                                <br></br>
+                                                <input type="number" required min={4} max={20} className="add-form-format" name="medium" onChange={this.handleChange} />
+                                            </label>
+                                            <br></br>
+                                            <label>
+                                                Large price:
+                                                <br></br>
+                                                <input type="number" required min={7} max={45} className="add-form-format" name="large" onChange={this.handleChange} />
+                                            </label>
+                                            <br></br>
+                                            <Button type="submit" className="btn btn-outline-dark" onClick={this.handleAdd}>Add Tea to Menu!</Button>
+                                        </form>
+                                    </div>
+                                </div>
+
+
                             </div>
-                        </Row>    
-                        </Col>
-                    </Row>
-                </Container>
+
+
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+
+
 
 
 

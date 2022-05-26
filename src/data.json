@@ -39,6 +39,22 @@
       "small": "$10",
       "medium": "$30",
       "large": "$50"
+    },
+    {
+      "id": 7,
+      "type": "",
+      "productname": "",
+      "small": "$1",
+      "medium": "$",
+      "large": "$"
+    },
+    {
+      "id": 8,
+      "type": "",
+      "productname": "",
+      "small": "$1",
+      "medium": "$",
+      "large": "$"
     }
   ]
 }

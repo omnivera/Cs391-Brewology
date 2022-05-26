@@ -169,32 +169,27 @@ padding: 1vh;
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
 }
 #add-coffee-form{
-  display: none;
-  padding-top: 50px
+display: none;
 }
 
 #add-tea-form{
   display: none;
-  padding-top: 50px
 }
 
+
+
+
+#coffe-img{
+width: 80%;
+height: 80%;
+
+}
 
 #tea-img{
-  float: right;
-  padding-right: 40vh;
-  text-align: top;
-  display: flex;
-  margin: auto;
-}
+  width: 80%;
+  height: 80%;
 
-#coffee-img{
-  padding-left: 50vh;
-  float: left;
-  text-align: top;
-  display: flex;
-  margin: auto;
-}
-
+  }
 #add-product-btn{
   margin-top: 50px;
   width: 25%;
