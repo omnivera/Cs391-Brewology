@@ -68,14 +68,6 @@ class Menu extends Component {
           </Fulltable>
         </div>
       </div>
-      // <div style={{ padding: "1rem 0" }}>
-      //   <h2>{this.state.message}</h2>
-      //   <FilteringTable title="* * * Today's Deals * * *"
-      //     list={this.state.products}
-      //     onDelete={this.handleDelete}>
-      //   </FilteringTable>
-      //   <ProductForm onAdd={this.handleAdd} />
-      // </div>
     );
   }
 }
