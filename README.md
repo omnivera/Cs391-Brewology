@@ -24,7 +24,11 @@ Coffee shop owner:
 
 ------------
 ###### Esrah Zahid
-- 
+- Designed the navigation bar, site logo, menu and add coffee/tea form
+- Wrote functional components for updating the **Menu** with each user input
+- Made usage of Axios API post, get and delete with ReactJS for REST API for efficient handling of menu data
+- Made react bootstrap edits in various locations
+- Worked on bug fixes, some enhancements in JavaScript, HTML and CSS.
 
 ------------
 ###### Alexandru Marian Vulc
