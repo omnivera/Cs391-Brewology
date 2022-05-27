@@ -20,7 +20,12 @@ Coffee shop owner:
 
 ### Individual contributions
 ###### Mert Dallar
-- 
+- Made usage of Axios API post, get, add and delete with ReactJS for REST API for efficient handling of menu data
+- Made connections between react and bootstrap
+- Worked on bug fixes, some enhancements in JavaScript, HTML and CSS.
+- Made router connections between pages
+- Made the base structure of all pages and styled them
+
 
 ------------
 ###### Esrah Zahid
