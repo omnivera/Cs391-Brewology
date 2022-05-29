@@ -1,12 +1,6 @@
 
 import '../App.css';
-import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Table from 'react-bootstrap/Table';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import axios from 'axios';
 import Fulltable from '../components/fulltable';
 import React, { Component } from 'react';

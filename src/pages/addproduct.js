@@ -1,15 +1,8 @@
-
 import '../App.css';
 import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Table from 'react-bootstrap/Table';
-import Container from 'react-bootstrap/Container';
-//import CoffeeForm from '../components/coffeeform';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import axios from 'axios';
-import React, { Component } from 'react';
+import React, { Component, useRef } from 'react';
 
 
 
@@ -25,8 +18,11 @@ class Menu extends Component {
             small: '',
             medium: '',
             large: '',
-
         }
+        this.teaForm = React.createRef();
+        this.coffeeForm = React.createRef();
+        this.teaImg = React.createRef();
+        this.coffeeImg = React.createRef();
         this.handleChange = this.handleChange.bind(this);
         this.handleCAdd = this.handleCAdd.bind(this);
         this.handleTAdd = this.handleTAdd.bind(this);
@@ -66,14 +62,15 @@ class Menu extends Component {
     }
     
     openCForm() {
-        document.getElementById("add-coffee-form").style.display = "block";
-        document.getElementById("coffe-img").style.display = "none";
+        this.coffeeForm.current.style.display = "block";
+        this.coffeeImg.current.style.display = "none";
     }
 
     openDForm() {
-        document.getElementById("add-tea-form").style.display = "block";
-        document.getElementById("tea-img").style.display = "none";
+        this.teaForm.current.style.display = "block";
+        this.teaImg.current.style.display = "none";
     }
+
 
     render() {
         return (
@@ -90,10 +87,12 @@ class Menu extends Component {
 
                                 <div className='row justify-content-center'>
                                     <img
+                                        ref={this.coffeeImg}
                                         src={require("../images/coffee-names.jpg")}
                                         id="coffe-img"
+                                        alt="coffee-names"
                                     />
-                                    <div className='add-coffee-form' id='add-coffee-form'>
+                                    <div className='add-coffee-form' id='add-coffee-form' ref={this.coffeeForm}>
 
                                         <p>Add more coffee to your menu here:</p>
                                         <form onSubmit={this.handleCAdd}>
@@ -157,12 +156,14 @@ class Menu extends Component {
 
 
                                     <img
+                                        ref={this.teaImg}
                                         src={require("../images/tea-names.jpg")}
                                         id="tea-img"
+                                        alt="tea names"
                                     />
 
 
-                                    <div className='add-tea-form' id='add-tea-form'>
+                                    <div className='add-tea-form' id='add-tea-form' ref={this.teaForm}>
                                         <p>Add more tea to your cart here:</p>
                                         <form onSubmit={this.handleTAdd}>
                                             <label>
