@@ -53,3 +53,7 @@ Coffee shop owner:
 `$ npm start`
 - if you get a npm error, use the following command
 `$ npm install`
+
+### External Libraries used
+- Font: https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap
+- Icon: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
