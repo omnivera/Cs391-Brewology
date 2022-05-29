@@ -3,7 +3,7 @@
     {
       "id": 1,
       "type": "Coffee",
-      "productname": "Americano",
+      "productname": "Iced Americano",
       "small": "$10",
       "medium": "$15",
       "large": "$20"
@@ -51,7 +51,7 @@
     {
       "id": 7,
       "type": "Tea",
-      "productname": "Black Tea",
+      "productname": "Iced Black Tea",
       "small": "$4",
       "medium": "$7",
       "large": "$10"

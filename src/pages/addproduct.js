@@ -2,7 +2,7 @@ import '../App.css';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-import React, { Component, useRef } from 'react';
+import React, { Component } from 'react';
 
 
 
@@ -18,6 +18,7 @@ class Menu extends Component {
             small: '',
             medium: '',
             large: '',
+            temperature: '',
         }
         this.teaForm = React.createRef();
         this.coffeeForm = React.createRef();
@@ -42,7 +43,7 @@ class Menu extends Component {
     handleChange(event) { this.setState({ [event.target.name]: event.target.value }); }
 
     handleCAdd(product) {
-        const obj = { id: 0, type: "Coffee", productname: this.state.productname, small: "$" + this.state.small, medium: "$" + this.state.medium, large: "$" + this.state.large }
+        const obj = { id: 0, type: "Coffee", productname: this.state.temperature+" "+this.state.productname, small: "$" + this.state.small, medium: "$" + this.state.medium, large: "$" + this.state.large }
         api.post('/', obj)
             .then(res => {
                 let { coffe } = this.state;
@@ -52,7 +53,7 @@ class Menu extends Component {
     }
 
     handleTAdd(product) {
-        const obj = { id: 0, type: "Tea", productname: this.state.productname, small: "$" + this.state.small, medium: "$" + this.state.medium, large: "$" + this.state.large }
+        const obj = { id: 0, type: "Tea", productname: this.state.temperature+" "+this.state.productname, small: "$" + this.state.small, medium: "$" + this.state.medium, large: "$" + this.state.large }
         api.post('/', obj)
             .then(res => {
                 let { coffe } = this.state;
@@ -60,7 +61,7 @@ class Menu extends Component {
                 this.setState({ coffe });
             })
     }
-    
+
     openCForm() {
         this.coffeeForm.current.style.display = "block";
         this.coffeeImg.current.style.display = "none";
@@ -136,35 +137,30 @@ class Menu extends Component {
                                                 <input type="number" required min={7} max={45} className="add-form-format" name="large" onChange={this.handleChange} />
                                             </label>
                                             <br></br>
+                                            <div class="radio-toolbar" onChange={this.handleChange}>
+                                                <input type="radio" name="temperature" value="Iced" />
+                                                <label for="iced">Iced &nbsp;</label>
+                                                <input type="radio" name="temperature" value="Normal" checked />
+                                                <label for="normal">Normal</label><br></br>
+                                            </div>
                                             <Button type="submit" className="btn btn-outline-dark">Add Coffee to Menu!</Button>
                                         </form>
                                     </div>
 
                                 </div>
-
-
-
-
                             </div>
 
                             <div className='col-md-6 col-sm-4 col-lg-4'>
-
                                 <Button type="button" id="add-product-btn" variant='dark' onClick={this.openDForm}>Add Tea</Button>
-
                                 <div className='row justify-content-center'>
-
-
-
                                     <img
                                         ref={this.teaImg}
                                         src={require("../images/tea-names.jpg")}
                                         id="tea-img"
                                         alt="tea names"
                                     />
-
-
                                     <div className='add-tea-form' id='add-tea-form' ref={this.teaForm}>
-                                        <p>Add more tea to your cart here:</p>
+                                        <p>Add more tea to your menu here:</p>
                                         <form onSubmit={this.handleTAdd}>
                                             <label>
                                                 Tea Name:
@@ -206,6 +202,12 @@ class Menu extends Component {
                                                 <input type="number" required min={7} max={45} className="add-form-format" name="large" onChange={this.handleChange} />
                                             </label>
                                             <br></br>
+                                            <div class="radio-toolbar">
+                                                <input type="radio" name="temperature" value="Iced" onChange={this.handleChange}/>
+                                                <label for="iced">Iced &nbsp;</label>
+                                                <input type="radio" name="temperature" value="Normal" checked onChange={this.handleChange}/>
+                                                <label for="normal">Normal</label><br></br>
+                                            </div>
                                             <Button type="submit" className="btn btn-outline-dark">Add Tea to Menu!</Button>
                                         </form>
                                     </div>

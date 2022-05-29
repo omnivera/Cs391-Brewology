@@ -209,3 +209,9 @@ height: 80%;
 .add-form-format:hover {
   background-color: #fafafa;
 }
+
+.radio-toolbar {
+  margin: 5px;
+}
+
+
